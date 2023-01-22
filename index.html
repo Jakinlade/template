@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>JJ and Milan's Wedding</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
-  </head>
-  <body>
-    <h1>JJ and Milan's Wedding</h1>
-    <p>Join us for a weekend of celebrations on Friday, Saturday, and Sunday.</p>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name"><br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email"><br>
-      <label for="days">Days attending:</label>
-      <input type="checkbox" id="friday" name="days" value="Friday">Friday (day)
-      <input type="checkbox" id="fridayNight" name="days" value="Friday Night">Friday (night)
-      <input type="checkbox" id="saturday" name="days" value="Saturday">Saturday (day and night)
-      <input type="checkbox" id="sunday" name="days" value="Sunday">Sunday (day)
-      <br>
-      <label for="volunteer">Would you like to help with cooking and cleaning during the event?</label>
-      <input type="checkbox" id="volunteer" name="volunteer" value="yes">Yes
-      <br>
-      <input type="submit" value="RSVP">
+<head>
+  <title>JJ and Milan's Wedding Party RSVP and Volunteer Sign-up</title>
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+  <h1>JJ and Milan's Wedding Party</h1>
+  <h2>RSVP and Volunteer Sign-up</h2>
+  
+  <form id="rsvp-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+    <br>
+    <label for="attending">Will you be attending?</label>
+    <input type="radio" id="attending-yes" name="attending" value"yes" required>
+    <label for="attending-yes">Yes</label>
+    <input type="radio" id="attending-no" name="attending" value="no" required>
+    <label for="attending-no">No</label>
+    <br>
+    <div id="attending-options" style="display:none;">
+    <label for="attending-days">Which days and nights will you be attending?</label>
+    <input type="checkbox" id="attending-friday-night" name="attending-days" value="friday-night">
+    <label for="attending-friday-night">Friday night</label>
+    <input type="checkbox" id="attending-saturday-day" name="attending-days" value="saturdayday">
+    <label for="attending-saturday-day">Saturday day</label>
+    <input type="checkbox" id="attending-saturday-night" name="attending-days" value="saturday-night">
+    <label for="attending-saturday-night">Saturday night</label>
+    <input type="checkbox" id="attending-sunday-day" name="attending-days" value="sunday-day">
+    <label for="attending-sunday-day">Sunday day</label>
+    <br>
+    <button type="button" id="continue-button" style="display:none;">Continue</button>
+    <br>
+    <div id="sorry-message" style="display:none;">
+    <p>We're sorry you can't attend. We will miss you!</p>
+    </div>
+    <div id="volunteer-question" style="display:none;">
+    <label for="volunteer">Would you like to volunteer?</label>
+    <input type="checkbox" id="volunteer" value="yes">
+    <br>
+    <div id="volunteer-options" style="display:none;">
+    <p>If you would like to volunteer, please fill out the form on this <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6vH_j7_SgT3zzfC4k6vRi6U4n4UJ8F5Wl1Q/viewform" target="_blank">link</a> to sign up for volunteering tasks.</p>
+    <br>
+    <button type="submit">Submit</button>
+    </div>
+    </div>
     </form>
-    <script src="./assets/style.js"></script>
-  </body>
-</html>
+    <div id="success-message" style="display:none;">
+    <p>Thank you for your RSVP and volunteer sign-up! We look forward to seeing you at the wedding.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./assets/style.js"></script>
+    </body>
+    </html>

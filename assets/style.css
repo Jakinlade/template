@@ -1,15 +1,55 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-}
-
-form {
-    display: inline-block;
-    margin-top: 20px;
-    text-align: left;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-}
+    background-color: #ADD8E6; /* Light blue */
+  }
+  
+  h1, h2 {
+    color: #FFA500; /* Orange */
+  }
+  
+  label {
+    color: #000080; /* Dark blue */
+  }
+  
+  /* Add hover effect for radio buttons */
+  input[type="radio"]:hover {
+    cursor: pointer;
+    background-color: #FFA500; /* Orange */
+  }
+  
+  /* Add hover effect for checkboxes */
+  input[type="checkbox"]:hover {
+    cursor: pointer;
+    background-color: #FFA500; /* Orange */
+  }
+  
+  /* Add hover effect for buttons */
+  button:hover {
+    cursor: pointer;
+    background-color: #FFA500; /* Orange */
+    color: #FFFFFF; /* White */
+  }
+  
+  #attending-options, #volunteer-options {
+    border: 2px solid #000080; /* Dark blue */
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* Add hover effect for attending options */
+  #attending-options:hover {
+    background-color: #FFA500; /* Orange */
+  }
+  
+  /* Add hover effect for volunteer options */
+  #volunteer-options:hover {
+    background-color: #FFA500; /* Orange */
+  }
+  
+  #success-message {
+    background-color: #90EE90; /* Light green */
+    border: 2px solid #228B22; /* Dark green */
+    padding: 10px;
+    margin: 10px;
+  }
